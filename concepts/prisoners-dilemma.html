@@ -121,5 +121,36 @@
             <p>&copy; 2025 Game Theory Explorer. All rights reserved.</p>
         </div>
     </footer>
+<script>
+    document.getElementById('cooperate-btn').addEventListener('click', function() {
+        // Randomly determine if prisoner B cooperates or defects
+        const prisonerBCooperates = Math.random() > 0.5;
+        const resultBox = document.getElementById('result');
+        const resultText = document.getElementById('result-text');
+        
+        if (prisonerBCooperates) {
+            resultText.innerHTML = "<strong>Prisoner B chose to cooperate.</strong><br>You both get 1 year in prison. This is the collectively optimal outcome.";
+        } else {
+            resultText.innerHTML = "<strong>Prisoner B chose to defect.</strong><br>You get 3 years in prison, while Prisoner B goes free.";
+        }
+        
+        resultBox.style.display = 'block';
+    });
+    
+    document.getElementById('defect-btn').addEventListener('click', function() {
+        // Randomly determine if prisoner B cooperates or defects
+        const prisonerBCooperates = Math.random() > 0.5;
+        const resultBox = document.getElementById('result');
+        const resultText = document.getElementById('result-text');
+        
+        if (prisonerBCooperates) {
+            resultText.innerHTML = "<strong>Prisoner B chose to cooperate.</strong><br>You go free, while Prisoner B gets 3 years in prison.";
+        } else {
+            resultText.innerHTML = "<strong>Prisoner B chose to defect.</strong><br>You both get 2 years in prison. This is the Nash Equilibrium.";
+        }
+        
+        resultBox.style.display = 'block';
+    });
+</script>
 </body>
 </html>
