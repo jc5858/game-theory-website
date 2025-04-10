@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prisoner's Dilemma - Game Theory Explorer</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Additional styles specific to concept pages */
+        .concept-content {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .payoff-matrix {
+            margin: 2rem 0;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .payoff-matrix th, .payoff-matrix td {
+            border: 1px solid var(--primary-color);
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .payoff-matrix th {
+            background-color: var(--primary-color);
+        }
+        
+        .insight-box {
+            background-color: rgba(246, 190, 0, 0.1);
+            border: 1px solid #f6be00;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Game Theory Explorer</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../concepts.html">Concepts</a></li>
+                    <li><a href="../interactive.html">Interactive Games</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="concept-content">
+            <h1>Prisoner's Dilemma</h1>
+            
+            <p>The Prisoner's Dilemma is one of the most famous examples in game theory that demonstrates why two rational individuals might not cooperate, even when it seems in their best interest to do so.</p>
+            
+            <h2>The Classic Scenario</h2>
+            <p>Two criminals are arrested and imprisoned. Each prisoner is in solitary confinement with no means of communicating with the other. The prosecutors lack sufficient evidence to convict the pair on the principal charge, but they have enough to convict both on a lesser charge.</p>
+            
+            <table class="payoff-matrix">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Prisoner B Cooperates</th>
+                        <th>Prisoner B Defects</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Prisoner A Cooperates</strong></td>
+                        <td>Both get 1 year</td>
+                        <td>A gets 3 years, B goes free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prisoner A Defects</strong></td>
+                        <td>A goes free, B gets 3 years</td>
+                        <td>Both get 2 years</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>Nash Equilibrium Analysis</h2>
+            <p>In this game, defecting is a dominant strategy for both players. No matter what the other player does, each player is better off defecting. However, the outcome when both defect (2 years each) is worse for both players than if they had both cooperated (1 year each).</p>
+            
+            <p>This demonstrates a key insight of game theory: individually rational decisions can lead to collectively suboptimal outcomes.</p>
+            
+            <div class="insight-box">
+                <h3>Key Insight</h3>
+                <p>The Prisoner's Dilemma illustrates why cooperation can be difficult to achieve even when it would benefit all parties involved, and helps explain phenomena ranging from arms races to climate change challenges.</p>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="#" class="btn">Previous: Introduction</a>
+                <a href="#" class="btn">Next: Iterated Prisoner's Dilemma</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Game Theory Explorer. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
